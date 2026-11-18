@@ -481,3 +481,51 @@ main {
     margin: 35px auto;
   }
 }
+
+/* SERMON SERIES PROJECT PAGE */
+
+.sermon-hero {
+  width: 100%;
+  margin: 0;
+}
+
+.sermon-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.sermon-description {
+  max-width: 1050px;
+  margin: 75px auto;
+  color: white;
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.sermon-shirts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 55px;
+}
+
+.sermon-shirts img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .sermon-description {
+    font-size: 16px;
+    margin: 35px auto;
+  }
+
+  .sermon-shirts {
+    gap: 5px;
+    margin-top: 30px;
+  }
+}
