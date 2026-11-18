@@ -170,7 +170,59 @@ function openProject(project) {
     backTop
   );
 
+
+} else if (name === "Acceptance Package") {
+
+  function makePacketRow(files, className) {
+    const row = document.createElement("div");
+    row.className = className;
+
+    files.forEach(file => {
+      const img = document.createElement("img");
+      img.src = imagePath(file);
+      img.alt = "Cedarville University acceptance package";
+      img.loading = "lazy";
+      row.appendChild(img);
+    });
+
+    return row;
+  }
+
+  // First two photographs
+  const top = makePacketRow(
+    ["packet-1.jpg", "packet-2.jpg"],
+    "packet-row packet-two"
+  );
+
+  // Original project description
+  const description = document.createElement("p");
+  description.className = "packet-description";
+  description.textContent =
+    "I collaborated with a team to design an acceptance package for Cedarville University, creating a memorable welcome for newly admitted students. We combined campus imagery, thoughtful layouts, and creative print effects while working within Cedarville’s brand guidelines. Selected from multiple groups’ proposals, our design was chosen for distribution to all accepted students over the next five years. This project gave me experience balancing creative exploration with brand consistency and designing for a meaningful moment in a student’s journey.";
+
+  // Three photographs beneath the description
+  const bottom = makePacketRow(
+    ["packet-3.jpg", "packet-4.jpg", "packet-5.jpg"],
+    "packet-row packet-three"
+  );
+
+  const backTop = document.createElement("a");
+  backTop.href = "#";
+  backTop.className = "back-to-top";
+  backTop.textContent = "↑ Back to Top";
+
+  backTop.onclick = event => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  gallery.append(top, description, bottom, backTop);
+
 } else {
+
 
     // Keep all other project galleries working
     for (let i = 1; i <= count; i++) {
