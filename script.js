@@ -57,6 +57,7 @@ function showPage(id) {
   window.scrollTo(0, 0);
 }
 
+
 function openProject(project) {
   const [name, cover, prefix, count] = project;
   const gallery = $("project-gallery");
@@ -64,16 +65,56 @@ function openProject(project) {
   $("project-title").textContent = name;
   gallery.replaceChildren();
 
-  for (let i = 1; i <= count; i++) {
-    const img = document.createElement("img");
-    img.src = imagePath(prefix + "-" + i + ".jpg");
-    img.alt = name + " image " + i;
-    img.loading = "lazy";
-    gallery.appendChild(img);
+  // Custom Rinnova layout
+  if (name === "Rinnova") {
+    const top = document.createElement("div");
+    top.className = "rinnova-top";
+
+    ["rinnova-6.jpg", "rinnova-7.jpg"].forEach(file => {
+      const img = document.createElement("img");
+      img.src = imagePath(file);
+      img.alt = "Rinnova coffee shop";
+      top.appendChild(img);
+    });
+
+    const description = document.createElement("p");
+    description.className = "rinnova-description";
+    description.textContent = `For my campus design job, I redesigned the menus for Rinnova, Cedarville University’s coffee shop, to strengthen hierarchy, readability, and visual consistency. Collaborating with the café’s executive, I developed a calm yet inviting direction through color, contrast, and simple typography. I organized drinks into clear categories, streamlined pricing, and used decorative lines to separate information. Working in Adobe InDesign, my biggest challenge was balancing negative space with the amount of menu content. My role included menu design, photography, print production, and applications such as cups, while incorporating the existing R symbol. The menus have remained in use across print and digital displays since summer 2025.`;
+
+    const menus = document.createElement("div");
+    menus.className = "rinnova-menus";
+
+    ["rinnova-2.jpg", "rinnova-8.jpg", "rinnova-9.jpg"].forEach(file => {
+      const img = document.createElement("img");
+      img.src = imagePath(file);
+      img.alt = "Rinnova menu design";
+      menus.appendChild(img);
+    });
+
+    const backTop = document.createElement("a");
+    backTop.href = "#";
+    backTop.className = "back-to-top";
+    backTop.textContent = "↑ Back to Top";
+    backTop.onclick = event => {
+      event.preventDefault();
+      window.scrollTo({top: 0, behavior: "smooth"});
+    };
+
+    gallery.append(top, description, menus, backTop);
+  } else {
+    // Keep all other project galleries working
+    for (let i = 1; i <= count; i++) {
+      const img = document.createElement("img");
+      img.src = imagePath(prefix + "-" + i + ".jpg");
+      img.alt = name + " image " + i;
+      img.loading = "lazy";
+      gallery.appendChild(img);
+    }
   }
 
   showPage("project");
 }
+
 
 function navigate() {
   const hash = decodeURIComponent(
