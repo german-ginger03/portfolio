@@ -1,16 +1,7 @@
-# Portfolio website — GitHub Pages starter
+# Seattle Beach portfolio homepage update
 
-This is an initial reconstruction based on the supplied Adobe Portfolio recording and ZIP assets, **not a pixel-perfect final copy**. Review the site before publishing.
+Upload **index.html, style.css, script.js, and the site-assets folder** to the root of your existing GitHub repository, replacing the three existing code files. Keep your existing `assets/` folder and `projects.json` in place. This update uses the already-uploaded images; it does not include the 89 images again.
 
-## Publish
-1. Create a public GitHub repository named `YOURUSERNAME.github.io`.
-2. Upload all the files and the `assets` folder contents to the repository root.
-3. Go to Settings > Pages > Deploy from a branch > main > /(root) > Save.
-4. Visit `https://YOURUSERNAME.github.io/` after deployment.
+On GitHub.com, open your portfolio repository > Add file > Upload files, drag in the three files and the **site-assets** folder, then Commit changes. Wait a few minutes and hard refresh the published website (Ctrl+Shift+R).
 
-## Before publishing
-- Replace the temporary SB monogram with your actual logo.
-- Add the original About, Contact, and project descriptions.
-- Check which files belong in Photography and Ceramics; the ZIP contains images but no clear ceramics folder.
-- Compare each project layout and navigation against the Adobe recording.
-- Contact forms require a separate form provider; GitHub Pages alone is static.
+The homepage now has the original sidebar categories, logo, patterned background, project ordering, and hover overlay. The exact years and text not available from the provided screenshots are not invented. Ceramics, Me, Contact, and Resume are labeled placeholders pending their original content.
