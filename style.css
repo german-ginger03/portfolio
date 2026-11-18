@@ -237,3 +237,41 @@ main {
     padding: 12px;
   }
 }
+
+/* Restore the original sidebar and gallery layout */
+
+@media (min-width: 621px) {
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    width: 27%;
+    min-height: 100%;
+    padding: 48px 18px 40px;
+    text-align: center;
+    background-color: #062c3d;
+    background-image: url("site-assets/Artboard%201-100.jpg");
+    background-repeat: repeat-y;
+    background-position: center top;
+    background-size: 100% auto;
+  }
+
+  main {
+    margin-left: 27%;
+    width: 73%;
+    min-height: 100vh;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .brand {
+    display: block;
+    width: min(160px, 65%);
+    margin: 0 auto 55px;
+  }
+}
