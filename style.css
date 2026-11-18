@@ -429,3 +429,55 @@ main {
     margin: 35px auto;
   }
 }
+
+/* ACCEPTANCE PACKAGE PROJECT PAGE */
+
+.packet-row {
+  display: grid;
+  width: 100%;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.packet-two {
+  grid-template-columns: 1fr 2.15fr;
+}
+
+.packet-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.packet-row img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+
+.packet-two img {
+  aspect-ratio: 1 / 1.15;
+}
+
+.packet-three img {
+  aspect-ratio: 3 / 4;
+}
+
+.packet-description {
+  max-width: 1050px;
+  margin: 75px auto;
+  color: white;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+  .packet-row {
+    gap: 5px;
+  }
+
+  .packet-description {
+    font-size: 16px;
+    margin: 35px auto;
+  }
+}
