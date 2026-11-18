@@ -22,17 +22,11 @@ body {
 
 /* SIDEBAR */
 .sidebar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: var(--sidebar);
-  min-height: 100%;
-  padding: 48px 18px 40px;
-  text-align: center;
   background-color: #062c3d;
-  background-image: url("site-assets/background.png");
-  background-repeat: repeat;
-  background-size: 220px 220px;
+background-image: url("site-assets/Artboard%201-100.jpg");
+background-repeat: repeat-y;
+background-position: center top;
+background-size: 100% auto;
 }
 
 .brand {
