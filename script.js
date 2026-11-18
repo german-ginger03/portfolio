@@ -221,7 +221,81 @@ function openProject(project) {
 
   gallery.append(top, description, bottom, backTop);
 
+
+} else if (name === "Sermon Series") {
+
+  function sermonImage(file, alt) {
+    const img = document.createElement("img");
+    img.src = imagePath(file);
+    img.alt = alt;
+    img.loading = "lazy";
+    return img;
+  }
+
+  // First sermon graphic: 2 Corinthians
+  const hero = document.createElement("div");
+  hero.className = "sermon-hero";
+  hero.appendChild(
+    sermonImage(
+      "sermon-merch-1.jpg",
+      "2 Corinthians For Your Joy sermon design"
+    )
+  );
+
+  // Original project description
+  const description = document.createElement("p");
+  description.className = "sermon-description";
+  description.textContent = `For my design job with Cedarville University’s Campus Experience, I developed graphics and apparel for “For Your Joy,” a shared theme across sermon series led by the SGA and class council chaplains. With creative freedom, I explored how joy and hope can remain present amid real struggle. Floral imagery, including exposed roots, represented the growth and strength needed to endure difficult seasons. Using Adobe Photoshop and InDesign, I combined edited imagery, textured backgrounds, and expressive typography, working to make the lettering interact with the flowers. The designs appeared on chapel screens and produced shirts, extending the message across campus.`;
+
+  // Second sermon graphic: different book and flower
+  const secondGraphic = document.createElement("div");
+  secondGraphic.className = "sermon-hero";
+  secondGraphic.appendChild(
+    sermonImage(
+      "sermon-merch-4.jpg",
+      "Second For Your Joy sermon design"
+    )
+  );
+
+  // Front and back shirt mockups
+  const shirts = document.createElement("div");
+  shirts.className = "sermon-shirts";
+
+  shirts.appendChild(
+    sermonImage(
+      "sermon-merch-2.jpg",
+      "For Your Joy shirt front"
+    ),
+    sermonImage(
+      "sermon-merch-3.jpg",
+      "For Your Joy shirt back"
+    )
+  );
+
+  // Back to Top
+  const backTop = document.createElement("a");
+  backTop.href = "#";
+  backTop.className = "back-to-top";
+  backTop.textContent = "↑ Back to Top";
+
+  backTop.onclick = event => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  gallery.append(
+    hero,
+    description,
+    secondGraphic,
+    shirts,
+    backTop
+  );
+
 } else {
+
 
 
     // Keep all other project galleries working
