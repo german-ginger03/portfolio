@@ -22,12 +22,19 @@ body {
 
 /* SIDEBAR */
 .sidebar {
-  background-color: #062c3d;
-background-image: url("site-assets/Artboard%201-100.jpg");
-background-repeat: repeat-y;
-background-position: center top;
-background-size: 100% auto;
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 27%;
   min-height: 100vh;
+  padding: 48px 18px 40px;
+  text-align: center;
+
+  background-color: #062c3d;
+  background-image: url("site-assets/Artboard%201-100.jpg");
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 100% auto;
 }
 
 .brand {
@@ -274,5 +281,20 @@ main {
     display: block;
     width: min(160px, 65%);
     margin: 0 auto 55px;
+  }
+}
+
+@media (min-width: 621px) {
+  body {
+    background-image: url("site-assets/Artboard%201-100.jpg");
+    background-repeat: repeat-y;
+    background-position: left top;
+    background-size: 27% auto;
+  }
+
+  main {
+    margin-left: 27%;
+    width: 73%;
+    background-color: #062c3d;
   }
 }
