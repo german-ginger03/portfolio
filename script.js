@@ -101,7 +101,77 @@ function openProject(project) {
     };
 
     gallery.append(top, description, menus, backTop);
-  } else {
+  
+} else if (name === "Process Book") {
+
+  function makeRow(files, className) {
+    const row = document.createElement("div");
+    row.className = className;
+
+    files.forEach(file => {
+      const img = document.createElement("img");
+      img.src = imagePath(file);
+      img.alt = "Process Book design";
+      img.loading = "lazy";
+      row.appendChild(img);
+    });
+
+    return row;
+  }
+
+  const top = makeRow(
+    ["process-book-1.jpg", "process-book-5.jpg"],
+    "process-row process-two"
+  );
+
+  const firstText = document.createElement("p");
+  firstText.className = "process-description";
+  firstText.textContent =
+    "This process book follows my development of an Olympic-inspired symbol from initial hand sketches to a refined digital mark. I began by studying Olympic imagery, existing logos, and the visual language of sports symbols to understand how simplified forms can communicate movement, energy, and unity.";
+
+  const middle = makeRow(
+    [
+      "process-book-3.jpg",
+      "process-book-4.jpg",
+      "process-book-6.jpg"
+    ],
+    "process-row process-three"
+  );
+
+  const secondText = document.createElement("p");
+  secondText.className = "process-description";
+  secondText.textContent =
+    "From there, I sketched a range of concepts and selected the strongest direction to develop digitally. By refining the shape, proportion, and style, I created a final symbol that feels clear, active, and cohesive within an Olympic-inspired visual system.";
+
+  const bottom = makeRow(
+    ["process-book-2.jpg", "process-book-7.jpg"],
+    "process-row process-two"
+  );
+
+  const backTop = document.createElement("a");
+  backTop.href = "#";
+  backTop.className = "back-to-top";
+  backTop.textContent = "↑ Back to Top";
+
+  backTop.onclick = event => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  gallery.append(
+    top,
+    firstText,
+    middle,
+    secondText,
+    bottom,
+    backTop
+  );
+
+} else {
+
     // Keep all other project galleries working
     for (let i = 1; i <= count; i++) {
       const img = document.createElement("img");
