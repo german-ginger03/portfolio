@@ -298,3 +298,89 @@ main {
     background-color: #062c3d;
   }
 }
+
+/* RINNOVA PROJECT PAGE */
+
+#project {
+  background: transparent;
+}
+
+#project-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 54px;
+  font-weight: 400;
+  margin: 35px 0 90px;
+}
+
+.rinnova-top {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 10px;
+}
+
+.rinnova-top img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  margin: 0;
+}
+
+.rinnova-description {
+  max-width: 1050px;
+  margin: 75px auto;
+  font-size: 20px;
+  line-height: 1.65;
+  color: white;
+}
+
+.rinnova-menus {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr 1fr;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.rinnova-menus img {
+  width: 100%;
+  height: 370px;
+  object-fit: fill;
+  margin: 0;
+}
+
+.back-to-top {
+  display: block;
+  margin: 110px auto 55px;
+  text-align: center;
+  color: #a1aab0;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.back-to-top:hover {
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .rinnova-top {
+    grid-template-columns: 1fr;
+  }
+
+  .rinnova-top img {
+    height: auto;
+  }
+
+  .rinnova-description {
+    font-size: 16px;
+    margin: 35px auto;
+  }
+
+  .rinnova-menus img {
+    height: auto;
+  }
+
+  #project-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+}
