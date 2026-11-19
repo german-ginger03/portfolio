@@ -705,7 +705,48 @@ secondGraphic.appendChild(
     backTop
   );
 
+
+} else if (name === "Chunky Dunky") {
+
+  // Two original project images
+  const images = document.createElement("div");
+  images.className = "dunky-images";
+
+  [
+    ["dunk-1.jpg", "Chunky Dunky framed poster mockup"],
+    ["dunk-2.jpg", "Chunky Dunky original advertisement"]
+  ].forEach(([file, alt]) => {
+    const img = document.createElement("img");
+    img.src = imagePath(file);
+    img.alt = alt;
+    img.loading = "lazy";
+    images.appendChild(img);
+  });
+
+  // Original project description
+  const description = document.createElement("p");
+  description.className = "dunky-description";
+
+  description.textContent = `For a class assignment, I created a concept advertisement for the Chunky Dunky shoe, combining my love of shoe design with inspiration from 1990s Nike posters. I illustrated the artwork in Adobe Illustrator, using Ben & Jerry’s imagery as reference for the playful landscape and visual style. Placing ice cream scoops inside the shoe gave the familiar product an unexpected twist and brought its connection to ice cream into the composition. The biggest challenge was making the scoops feel consistent with the rest of the illustration. Presented in print and digitally, the final poster blends sneaker culture with a colorful, imaginative approach to advertising.`;
+
+  // Back to Top
+  const backTop = document.createElement("a");
+  backTop.href = "#";
+  backTop.className = "back-to-top";
+  backTop.textContent = "↑ Back to Top";
+
+  backTop.onclick = event => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  gallery.append(images, description, backTop);
+
 } else {
+
 
 
 
