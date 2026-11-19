@@ -785,7 +785,72 @@ secondGraphic.appendChild(
 
   gallery.append(images, description, backTop);
 
+
+} else if (name === "Mascot") {
+
+  function mascotImage(file, alt) {
+    const img = document.createElement("img");
+    img.src = imagePath(file);
+    img.alt = alt;
+    img.loading = "lazy";
+    return img;
+  }
+
+  // Main mascot illustration
+  const hero = document.createElement("div");
+  hero.className = "mascot-hero";
+
+  hero.appendChild(
+    mascotImage(
+      "duck-1.jpg",
+      "Oregon Ducks mascot redesign"
+    )
+  );
+
+  // Original project description
+  const description = document.createElement("p");
+  description.className = "mascot-description";
+
+  description.textContent = `For a class assignment, I reimagined the Oregon Ducks mascot in a new visual style. My interest in the team’s connection to Nike and shoe design inspired me to put my own twist on its recognizable character. I illustrated the duck from scratch, referencing both the original mascot’s defining features and photographs of ducks. The negative-space approach emerged unexpectedly when I removed the background—a discovery that became central to the design. Finding typography that matched the illustration was the biggest challenge, leading me toward a collegiate style with outlined lettering. Concept merchandise mockups show how the identity could extend across apparel and accessories.`;
+
+  // Two images below the description
+  const bottom = document.createElement("div");
+  bottom.className = "mascot-bottom";
+
+  bottom.append(
+    mascotImage(
+      "duck-2.jpg",
+      "Oregon Ducks mascot on dark green"
+    ),
+    mascotImage(
+      "duck-3.jpg",
+      "Oregon Ducks merchandise mockups"
+    )
+  );
+
+  // Back to Top
+  const backTop = document.createElement("a");
+  backTop.href = "#";
+  backTop.className = "back-to-top";
+  backTop.textContent = "↑ Back to Top";
+
+  backTop.onclick = event => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  gallery.append(
+    hero,
+    description,
+    bottom,
+    backTop
+  );
+
 } else {
+
 
 
 
