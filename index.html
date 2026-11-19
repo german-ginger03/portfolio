@@ -129,6 +129,25 @@
   </p>
 
   <div id="photos" class="photography-gallery"></div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const photos = document.getElementById("photos");
+
+  const observer = new MutationObserver(() => {
+    photos.querySelectorAll("button.tile").forEach(button => {
+      const img = button.querySelector("img");
+      if (img) {
+        const replacement = img.cloneNode(true);
+        replacement.removeAttribute("tabindex");
+        button.replaceWith(replacement);
+      }
+    });
+  });
+
+  observer.observe(photos, { childList: true });
+});
+</script>
+
 
   <a href="#photography"
      class="photography-back-top"
