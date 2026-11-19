@@ -666,24 +666,51 @@ secondGraphic.appendChild(
   );
 
 
+
 } else if (name === "Grinch") {
 
-  // Main illustration
-  const illustration = document.createElement("div");
-  illustration.className = "grinch-illustration";
+  // Helper to create Grinch images
+  function grinchImage(file, alt) {
+    const img = document.createElement("img");
+    img.src = imagePath(file);
+    img.alt = alt;
+    img.loading = "lazy";
+    return img;
+  }
 
-  const img = document.createElement("img");
-  img.src = imagePath("grinch-1.jpg");
-  img.alt = "Grinch illustration created in Adobe Illustrator";
-  img.loading = "lazy";
+  // Finished illustration at the top
+  const hero = document.createElement("div");
+  hero.className = "grinch-hero";
 
-  illustration.appendChild(img);
+  hero.appendChild(
+    grinchImage(
+      "grinch-final.png",
+      "Final Grinch illustration"
+    )
+  );
 
-  // Original project description
+  // Updated project description
   const description = document.createElement("p");
   description.className = "grinch-description";
 
-  description.textContent = `For a class assignment, I created a single illustration that tells a recognizable story without relying on words. Inspired by “You’re a Mean One, Mr. Grinch” and the movie, I brought together visual references within the Grinch’s outline, allowing individual details to reveal the character and narrative. I illustrated every element myself in Adobe Illustrator, using imagery to carry the story. The project challenged me to pay close attention to detail while keeping the composition cohesive. The final illustration was presented both in print and digitally.`;
+  description.textContent = `For a class assignment, I created an illustration that tells a recognizable story without relying on words. Inspired by “You’re a Mean One, Mr. Grinch” and the movie, I brought together visual references associated with the character and arranged them into a recognizable silhouette. I illustrated every element myself in Adobe Illustrator, using imagery to carry the story.
+
+  The two progress images below show how the illustration developed. I began by arranging individual objects within the Grinch’s outline, experimenting with their scale, placement, and relationship to one another. As the design progressed, I added more visual details and refined the composition to create a fuller, more cohesive illustration. The biggest challenge was balancing the individual elements while maintaining the recognizable shape of the character. The final illustration was presented both in print and digitally.`;
+
+  // Two progress images below the description
+  const progress = document.createElement("div");
+  progress.className = "grinch-progress";
+
+  progress.append(
+    grinchImage(
+      "grinch-progress.png",
+      "Early Grinch illustration showing the outline"
+    ),
+    grinchImage(
+      "grinch-1.jpg",
+      "Grinch illustration development"
+    )
+  );
 
   // Back to Top
   const backTop = document.createElement("a");
@@ -700,10 +727,13 @@ secondGraphic.appendChild(
   };
 
   gallery.append(
-    illustration,
+    hero,
     description,
+    progress,
     backTop
   );
+
+
 
 
 } else if (name === "Chunky Dunky") {
