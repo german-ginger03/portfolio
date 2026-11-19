@@ -745,7 +745,48 @@ secondGraphic.appendChild(
 
   gallery.append(images, description, backTop);
 
+
+} else if (name === "Devil Wears Prata") {
+
+  // Two project images
+  const images = document.createElement("div");
+  images.className = "prata-images";
+
+  [
+    ["dwp-1.jpg", "Devil Wears Prata outdoor poster mockup"],
+    ["dwp-2.jpg", "Devil Wears Prata typography poster"]
+  ].forEach(([file, alt]) => {
+    const img = document.createElement("img");
+    img.src = imagePath(file);
+    img.alt = alt;
+    img.loading = "lazy";
+    images.appendChild(img);
+  });
+
+  // Original project description
+  const description = document.createElement("p");
+  description.className = "prata-description";
+
+  description.textContent = `For a class assignment, I created a poster using only typography and a randomly assigned typeface: Prata. I reinterpreted The Devil Wears Prada movie poster, building its recognizable high heel and pitchfork imagery entirely from type. Working in Adobe InDesign and Illustrator, I used variations in text size, density, and color to define the shapes and create depth. The biggest challenge was fitting text into narrow areas, particularly the pitchfork, while preserving a clear silhouette. Presented in print and digitally, the final piece explores how typography can function as both readable text and illustration.`;
+
+  // Back to Top
+  const backTop = document.createElement("a");
+  backTop.href = "#";
+  backTop.className = "back-to-top";
+  backTop.textContent = "↑ Back to Top";
+
+  backTop.onclick = event => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  gallery.append(images, description, backTop);
+
 } else {
+
 
 
 
