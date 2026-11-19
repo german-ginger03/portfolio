@@ -562,10 +562,22 @@ secondGraphic.appendChild(
   const top = document.createElement("div");
   top.className = "cso-top";
 
-  top.append(
-    csoImage("cso-1.jpg", "Initial hand-drawn logo sketches"),
-    csoImage("cso-2.jpg", "Three digital logo concepts")
-  );
+ 
+const rotatedSketch = csoImage(
+  "cso-1.jpg",
+  "Initial hand-drawn logo sketches"
+);
+
+rotatedSketch.classList.add("cso-rotated-sketch");
+
+top.append(
+  rotatedSketch,
+  csoImage(
+    "cso-6.jpg",
+    "Student Organization Principles logo variations"
+  )
+);
+
 
   // Original project description
   const description = document.createElement("p");
@@ -577,12 +589,11 @@ secondGraphic.appendChild(
   const bottom = document.createElement("div");
   bottom.className = "cso-bottom";
 
-  [
-    "cso-3.jpg",
-    "cso-4.jpg",
-    "cso-5.jpg",
-    "cso-6.jpg"
-  ].forEach(file => {
+ [
+  "cso-3.jpg",
+  "cso-4.jpg",
+  "cso-5.jpg"
+].forEach(file => {
     bottom.appendChild(
       csoImage(file, "CSO logo variation")
     );
