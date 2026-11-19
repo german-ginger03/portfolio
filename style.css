@@ -1225,3 +1225,75 @@ main {
     gap: 5px;
   }
 }
+
+/* PHOTOGRAPHY PAGE */
+
+.photography-title {
+  text-align: center;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 54px;
+  font-weight: 400;
+  margin: 35px 0 55px;
+}
+
+.photography-description {
+  max-width: 1050px;
+  margin: 0 auto 65px;
+  color: white;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.photography-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.photography-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0;
+}
+
+/* Remove tile hover effects on photography only */
+#photography .tile .overlay {
+  display: none;
+}
+
+#photography .tile img {
+  transform: none !important;
+}
+
+.photography-back-top {
+  display: block;
+  text-align: center;
+  margin: 85px auto 50px;
+  color: #a1aab0;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.photography-back-top:hover {
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .photography-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .photography-description {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+
+  .photography-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+  }
+}
