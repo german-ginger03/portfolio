@@ -1538,3 +1538,27 @@ main {
     margin-top: 65px;
   }
 }
+
+/* TYPOGRAPHY-BASED RESUME COVER */
+
+#about-grid .resume-cover {
+  background: #062c3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.resume-cover-text {
+  font-family: Futura, "Century Gothic", Arial, sans-serif;
+  font-size: clamp(30px, 4vw, 64px);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+#about-grid .resume-cover .overlay {
+  z-index: 2;
+}
