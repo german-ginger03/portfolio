@@ -727,3 +727,53 @@ main {
     gap: 5px;
   }
 }
+
+/* FONTBOOK PROJECT PAGE */
+
+.fontbook-hero {
+  width: 100%;
+}
+
+.fontbook-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.fontbook-description {
+  max-width: 1050px;
+  margin: 75px auto;
+  color: white;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.fontbook-spreads {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  align-items: start;
+}
+
+.fontbook-spreads img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .fontbook-description {
+    font-size: 16px;
+    margin: 35px auto;
+  }
+
+  .fontbook-spreads {
+    gap: 5px;
+  }
+}
