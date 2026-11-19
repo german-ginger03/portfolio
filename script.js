@@ -952,3 +952,31 @@ if (document.readyState === "loading") {
 } else {
   initialize();
 }
+
+/* HIGHLIGHT CURRENT NAVIGATION LINK */
+
+function updateActiveNavigation() {
+  const currentPage = decodeURIComponent(
+    window.location.hash.substring(1)
+  );
+
+  document.querySelectorAll(".sidebar nav a").forEach(link => {
+    const linkPage = decodeURIComponent(
+      link.getAttribute("href")?.replace(/^#/, "") || ""
+    );
+
+    const isActive = linkPage === currentPage;
+
+    link.classList.toggle("active", isActive);
+
+    if (isActive) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+}
+
+window.addEventListener("hashchange", updateActiveNavigation);
+
+updateActiveNavigation();
