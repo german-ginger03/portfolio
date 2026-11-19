@@ -1562,3 +1562,18 @@ main {
 #about-grid .resume-cover .overlay {
   z-index: 2;
 }
+
+/* ME PAGE - EQUAL SPACE ABOVE AND BELOW TEXT */
+
+@media (min-width: 801px) {
+  #me .me-layout {
+    align-items: stretch;
+  }
+
+  #me .me-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+}
