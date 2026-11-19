@@ -609,7 +609,64 @@ secondGraphic.appendChild(
     backTop
   );
 
+
+} else if (name === "ALT Night 5 Graphics") {
+
+  function altImage(file, alt) {
+    const img = document.createElement("img");
+    img.src = imagePath(file);
+    img.alt = alt;
+    img.loading = "lazy";
+    return img;
+  }
+
+  // First row: horizontal and vertical graphics
+  const top = document.createElement("div");
+  top.className = "alt-top";
+
+  top.append(
+    altImage("alt-2.jpg", "ALT 5 horizontal event graphic"),
+    altImage("alt-4.jpg", "ALT 5 vertical event graphic")
+  );
+
+  // Original project description
+  const description = document.createElement("p");
+  description.className = "alt-description";
+
+  description.textContent = `For my design job at Cedarville University, I created promotional graphics for ALT 5, an event offering students activities on campus as an alternative to going off campus. Working with an assigned tropical beach theme, I drew inspiration from vintage Hawaiian travel posters. I illustrated the entire scene in Adobe Illustrator, using layered vector shapes, warm colors, and grain textures to capture that nostalgic feel. The main challenge was translating the landscape into vector artwork while keeping it lively and dimensional. I adapted the design for campus screens, Instagram, Daily Buzz, and the chapel screen, maintaining a consistent look across each format.`;
+
+  // Second row: poster mockup and event graphic
+  const bottom = document.createElement("div");
+  bottom.className = "alt-bottom";
+
+  bottom.append(
+    altImage("alt-1.jpg", "ALT 5 poster mockup"),
+    altImage("alt-3.jpg", "ALT 5 promotional design")
+  );
+
+  // Back to Top
+  const backTop = document.createElement("a");
+  backTop.href = "#";
+  backTop.className = "back-to-top";
+  backTop.textContent = "↑ Back to Top";
+
+  backTop.onclick = event => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  gallery.append(
+    top,
+    description,
+    bottom,
+    backTop
+  );
+
 } else {
+
 
 
 
