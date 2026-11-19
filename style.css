@@ -504,10 +504,14 @@ main {
   line-height: 1.65;
 }
 
+
+/* SERMON SERIES SHIRT MOCKUPS */
+
 .sermon-shirts {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
+  width: 100%;
   margin-top: 55px;
 }
 
@@ -515,8 +519,21 @@ main {
   display: block;
   width: 100%;
   height: auto;
+  min-width: 0;
+  max-width: 100%;
+  object-fit: contain;
   margin: 0;
+  visibility: visible;
+  opacity: 1;
 }
+
+@media (max-width: 700px) {
+  .sermon-shirts {
+    gap: 5px;
+    margin-top: 30px;
+  }
+}
+
 
 @media (max-width: 700px) {
   .sermon-description {
