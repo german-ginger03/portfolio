@@ -1106,3 +1106,14 @@ main {
     gap: 5px;
   }
 }
+
+/* HIGHLIGHT CURRENT PAGE IN NAVIGATION */
+
+.sidebar nav a.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.sidebar nav a:not(.active) {
+  font-weight: 400;
+}
