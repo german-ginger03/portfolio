@@ -665,7 +665,48 @@ secondGraphic.appendChild(
     backTop
   );
 
+
+} else if (name === "Grinch") {
+
+  // Main illustration
+  const illustration = document.createElement("div");
+  illustration.className = "grinch-illustration";
+
+  const img = document.createElement("img");
+  img.src = imagePath("grinch-1.jpg");
+  img.alt = "Grinch illustration created in Adobe Illustrator";
+  img.loading = "lazy";
+
+  illustration.appendChild(img);
+
+  // Original project description
+  const description = document.createElement("p");
+  description.className = "grinch-description";
+
+  description.textContent = `For a class assignment, I created a single illustration that tells a recognizable story without relying on words. Inspired by “You’re a Mean One, Mr. Grinch” and the movie, I brought together visual references within the Grinch’s outline, allowing individual details to reveal the character and narrative. I illustrated every element myself in Adobe Illustrator, using imagery to carry the story. The project challenged me to pay close attention to detail while keeping the composition cohesive. The final illustration was presented both in print and digitally.`;
+
+  // Back to Top
+  const backTop = document.createElement("a");
+  backTop.href = "#";
+  backTop.className = "back-to-top";
+  backTop.textContent = "↑ Back to Top";
+
+  backTop.onclick = event => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  gallery.append(
+    illustration,
+    description,
+    backTop
+  );
+
 } else {
+
 
 
 
