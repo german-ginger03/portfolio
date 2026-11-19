@@ -1056,3 +1056,53 @@ main {
     margin: 35px auto;
   }
 }
+
+/* MASCOT PROJECT PAGE */
+
+.mascot-hero {
+  width: 100%;
+}
+
+.mascot-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.mascot-description {
+  max-width: 1050px;
+  margin: 75px auto;
+  color: white;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.mascot-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  align-items: start;
+}
+
+.mascot-bottom img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .mascot-description {
+    font-size: 16px;
+    margin: 35px auto;
+  }
+
+  .mascot-bottom {
+    gap: 5px;
+  }
+}
