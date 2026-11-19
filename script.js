@@ -892,8 +892,14 @@ function navigate() {
   }
 
   const pages = [
-  "home", "studio", "ceramics", "photography",
-  "me", "contact", "resume"
+  "home",
+  "studio",
+  "ceramics",
+  "photography",
+  "about-home",
+  "me",
+  "contact",
+  "resume"
 ];
 
   showPage(pages.includes(hash) ? hash : "home");
