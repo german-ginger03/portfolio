@@ -349,18 +349,27 @@ document.addEventListener("DOMContentLoaded", () => {
   class="contact-form"
   action="https://formspree.io/f/xkjrzyzr"
   method="POST">
-    <label for="contact-name">Name *</label>
-    <input id="contact-name" type="text"
-           placeholder="Your Name..." required>
+   
+<label for="contact-name">Name *</label>
+<input id="contact-name"
+       name="name"
+       type="text"
+       placeholder="Your Name..."
+       required>
 
-    <label for="contact-email">Email Address *</label>
-    <input id="contact-email" type="email"
-           placeholder="Your Email Address..." required>
+<label for="contact-email">Email Address *</label>
+<input id="contact-email"
+       name="email"
+       type="email"
+       placeholder="Your Email Address..."
+       required>
 
-    <label for="contact-message">Message *</label>
-    <textarea id="contact-message"
-              placeholder="Your Message..."
-              required></textarea>
+<label for="contact-message">Message *</label>
+<textarea id="contact-message"
+          name="message"
+          placeholder="Your Message..."
+          required></textarea>
+
 
     <button type="submit">Submit</button>
   </form>
