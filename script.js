@@ -486,7 +486,69 @@ secondGraphic.appendChild(
     backTop
   );
 
+
+} else if (name === "JS") {
+
+  function jsImage(file, alt) {
+    const img = document.createElement("img");
+    img.src = imagePath(file);
+    img.alt = alt;
+    img.loading = "lazy";
+    return img;
+  }
+
+  // First row: monogram and ticket design
+  const top = document.createElement("div");
+  top.className = "js-top";
+
+  top.append(
+    jsImage("js-1.jpg", "Junior Senior monogram"),
+    jsImage("js-2.jpg", "Junior Senior ticket design")
+  );
+
+  // Original description
+  const description = document.createElement("p");
+  description.className = "js-description";
+
+  description.textContent = `For my design job at Cedarville University, I created a refreshed identity for Junior Senior, a formal college event similar to prom. The direction called for a classic, upscale feel, which I developed through refined serif typography, a cream-and-gold palette, and a diamond pattern inspired by marble tile floors. I designed every element in Adobe InDesign, including a JS monogram intended for this event and future years. The biggest challenge was finding how the J and S could fit together as a balanced, recognizable mark. The identity extended across social media, campus screens, and printed invitations, creating a consistent presentation from promotion to the event itself.`;
+
+  // Second row: three designs
+  const bottom = document.createElement("div");
+  bottom.className = "js-bottom";
+
+  [
+    "js-5.jpg",
+    "js-3.jpg",
+    "js-4.jpg"
+  ].forEach(file => {
+    bottom.appendChild(
+      jsImage(file, "Junior Senior promotional design")
+    );
+  });
+
+  // Back to Top
+  const backTop = document.createElement("a");
+  backTop.href = "#";
+  backTop.className = "back-to-top";
+  backTop.textContent = "↑ Back to Top";
+
+  backTop.onclick = event => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  gallery.append(
+    top,
+    description,
+    bottom,
+    backTop
+  );
+
 } else {
+
 
 
 
