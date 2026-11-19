@@ -289,12 +289,32 @@ secondGraphic.appendChild(
     });
   };
 
-  gallery.append(
-    hero,
-    description,
-    secondGraphic,
-    shirts,
-    backTop
+ 
+const peterAndShirts = document.createElement("div");
+peterAndShirts.className = "sermon-final-grid";
+
+peterAndShirts.appendChild(
+  sermonImage(
+    "sermon-merch-4.jpg",
+    "1 Peter For Your Joy sermon graphic"
+  ),
+  sermonImage(
+    "sermon-merch-2.jpg",
+    "For Your Joy shirt front"
+  ),
+  sermonImage(
+    "sermon-merch-3.jpg",
+    "For Your Joy shirt back"
+  )
+);
+
+gallery.append(
+  hero,
+  description,
+  peterAndShirts,
+  backTop
+);
+
   );
 
 
