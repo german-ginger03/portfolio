@@ -1634,3 +1634,31 @@ main {
     gap: 6px;
   }
 }
+
+/* CSO PROJECT ADJUSTMENTS */
+
+.cso-top .cso-rotated-sketch {
+  transform: rotate(-90deg) scale(0.75);
+  transform-origin: center;
+}
+
+.cso-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  align-items: center;
+}
+
+.cso-bottom img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .cso-bottom {
+    gap: 5px;
+  }
+}
