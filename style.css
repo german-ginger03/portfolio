@@ -1297,3 +1297,12 @@ main {
     gap: 5px;
   }
 }
+/* ABOUT ME HOMEPAGE */
+
+#about-home.page {
+  padding: 0;
+}
+
+#about-grid .tile {
+  text-decoration: none;
+}
