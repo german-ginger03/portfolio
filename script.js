@@ -297,7 +297,72 @@ secondGraphic.appendChild(
     backTop
   );
 
+
+} else if (name === "MISO Gala") {
+
+  function misoImage(file, alt) {
+    const img = document.createElement("img");
+    img.src = imagePath(file);
+    img.alt = alt;
+    img.loading = "lazy";
+    return img;
+  }
+
+  // MISO Gala main promotional design
+  const hero = document.createElement("div");
+  hero.className = "miso-hero";
+
+  hero.appendChild(
+    misoImage(
+      "miso-4.jpg",
+      "MISO Midnight Bloom gala promotional design"
+    )
+  );
+
+  // Original project description
+  const description = document.createElement("p");
+  description.className = "miso-description";
+
+  description.textContent = `As an international student and an officer in Cedarville’s Multicultural International Student Organization, I designed promotional materials for our Annual Embassy Gala, “Midnight Bloom.” The event invited campus to share in the cultures and traditions we grew up with. Working from a provided color palette and wording, I developed the visual direction through floral imagery, a layered background, and elegant typography. I used Adobe Photoshop and InDesign to edit imagery and build coordinated layouts for printed pieces, social media, and campus screens. The project gave me an opportunity to connect my design skills with a community and celebration that were personally meaningful to me.`;
+
+  // Two images below the description
+  const bottom = document.createElement("div");
+  bottom.className = "miso-bottom";
+
+  bottom.appendChild(
+    misoImage(
+      "miso-2.jpg",
+      "MISO Gala coordinated promotional graphics"
+    ),
+    misoImage(
+      "miso-1.jpg",
+      "MISO Gala printed invitations"
+    )
+  );
+
+  // Back to Top
+  const backTop = document.createElement("a");
+  backTop.href = "#";
+  backTop.className = "back-to-top";
+  backTop.textContent = "↑ Back to Top";
+
+  backTop.onclick = event => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  gallery.append(
+    hero,
+    description,
+    bottom,
+    backTop
+  );
+
 } else {
+
 
 
 
