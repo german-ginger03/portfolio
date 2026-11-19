@@ -677,3 +677,53 @@ main {
     grid-column: auto;
   }
 }
+
+/* CAMPUS EXPERIENCE INFORMATIONAL */
+
+.ce-hero {
+  width: 100%;
+}
+
+.ce-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.ce-description {
+  max-width: 1050px;
+  margin: 75px auto;
+  color: white;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.ce-graphics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  align-items: start;
+}
+
+.ce-graphics img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .ce-description {
+    font-size: 16px;
+    margin: 35px auto;
+  }
+
+  .ce-graphics {
+    gap: 5px;
+  }
+}
