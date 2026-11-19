@@ -1306,3 +1306,73 @@ main {
 #about-grid .tile {
   text-decoration: none;
 }
+
+/* ABOUT ME - INDIVIDUAL PAGE */
+
+#me.page {
+  padding: 35px 30px 70px;
+}
+
+.me-title {
+  text-align: center;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 54px;
+  font-weight: 400;
+  margin: 10px 0 85px;
+}
+
+.me-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+  width: 100%;
+}
+
+.me-photo {
+  width: 100%;
+}
+
+.me-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.me-content {
+  padding: 55px 0 0;
+  font-family: "Century Gothic", Arial, sans-serif;
+}
+
+.me-content p {
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.7;
+  margin: 0 0 28px;
+}
+
+.me-content .me-intro {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 800px) {
+  .me-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .me-title {
+    font-size: 36px;
+    margin-bottom: 35px;
+  }
+
+  .me-content {
+    padding: 0;
+  }
+
+  .me-content p {
+    font-size: 16px;
+  }
+}
