@@ -361,7 +361,69 @@ secondGraphic.appendChild(
     backTop
   );
 
+
+} else if (name === "Campus Experience Informational") {
+
+  function ceImage(file, alt) {
+    const img = document.createElement("img");
+    img.src = imagePath(file);
+    img.alt = alt;
+    img.loading = "lazy";
+    return img;
+  }
+
+  // Full-width bus stop mockup
+  const hero = document.createElement("div");
+  hero.className = "ce-hero";
+  hero.appendChild(
+    ceImage(
+      "ce-info-1.jpg",
+      "Campus Experience informational bus stop mockup"
+    )
+  );
+
+  // Original project description
+  const description = document.createElement("p");
+  description.className = "ce-description";
+  description.textContent = `As part of my design job at Cedarville University, I independently created promotional graphics for a Campus Experience and STING information meeting. The goal was to connect campus jobs and involvement opportunities with the students behind them. Combining some of my own photography with photo cutouts, I developed an energetic collage that put recognizable faces at the center of the design. Cedarville’s signature yellow, bold typography, and handwritten accents created a youthful, active feel while keeping the meeting details easy to find. I adapted the design for multiple screen formats, and the graphics ran on campus screens for several months.`;
+
+  // Three promotional graphics
+  const graphics = document.createElement("div");
+  graphics.className = "ce-graphics";
+
+  [
+    "ce-info-2.jpg",
+    "ce-info-3.jpg",
+    "ce-info-4.jpg"
+  ].forEach(file => {
+    graphics.appendChild(
+      ceImage(file, "Campus Experience promotional graphic")
+    );
+  });
+
+  // Back to Top
+  const backTop = document.createElement("a");
+  backTop.href = "#";
+  backTop.className = "back-to-top";
+  backTop.textContent = "↑ Back to Top";
+
+  backTop.onclick = event => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  gallery.append(
+    hero,
+    description,
+    graphics,
+    backTop
+  );
+
 } else {
+
 
 
 
