@@ -1117,3 +1117,32 @@ main {
 .sidebar nav a:not(.active) {
   font-weight: 400;
 }
+
+/* STUDIO HOMEPAGE */
+
+#studio.page {
+  padding: 0;
+}
+
+.studio-heading {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.studio-heading:hover,
+.studio-heading.active {
+  color: #ffffff;
+}
+
+#studio-grid .tile {
+  text-decoration: none;
+}
+
+#studio-grid .tile .name {
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-weight: 700;
+}
