@@ -248,14 +248,21 @@ function openProject(project) {
   description.textContent = `For my design job with Cedarville University’s Campus Experience, I developed graphics and apparel for “For Your Joy,” a shared theme across sermon series led by the SGA and class council chaplains. With creative freedom, I explored how joy and hope can remain present amid real struggle. Floral imagery, including exposed roots, represented the growth and strength needed to endure difficult seasons. Using Adobe Photoshop and InDesign, I combined edited imagery, textured backgrounds, and expressive typography, working to make the lettering interact with the flowers. The designs appeared on chapel screens and produced shirts, extending the message across campus.`;
 
   // Second sermon graphic: different book and flower
-  const secondGraphic = document.createElement("div");
-  secondGraphic.className = "sermon-hero";
-  secondGraphic.appendChild(
-    sermonImage(
-      "sermon-merch-4.jpg",
-      "Second For Your Joy sermon design"
-    )
-  );
+  
+const secondGraphic = document.createElement("div");
+secondGraphic.className = "sermon-peter-row";
+
+secondGraphic.appendChild(
+  sermonImage(
+    "sermon-merch-4.jpg",
+    "1 Peter For Your Joy sermon graphic"
+  ),
+  sermonImage(
+    "sermon-merch-3.jpg",
+    "For Your Joy second shirt mockup"
+  )
+);
+
 
   // Front and back shirt mockups
   const shirts = document.createElement("div");
@@ -265,10 +272,6 @@ function openProject(project) {
     sermonImage(
       "sermon-merch-2.jpg",
       "For Your Joy shirt front"
-    ),
-    sermonImage(
-      "sermon-merch-3.jpg",
-      "For Your Joy shirt back"
     )
   );
 
