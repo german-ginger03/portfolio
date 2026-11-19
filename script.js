@@ -10,7 +10,7 @@ const projects = [
   ["JS", "js-1.jpg", "js", 5],
   ["Cedarville Student Organization Principles", "cso-1.jpg", "cso", 6],
   ["ALT Night 5 Graphics", "alt-1.jpg", "alt", 4],
-  ["Grinch", "grinch-1.jpg", "grinch", 1],
+  ["Grinch", "grinch-final.png", "grinch", 1],
   ["Chunky Dunky", "dunk-1.jpg", "dunk", 2],
   ["Devil Wears Prata", "dwp-1.jpg", "dwp", 3],
   ["Mascot", "duck-1.jpg", "duck", 3]
