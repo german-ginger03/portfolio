@@ -422,7 +422,72 @@ secondGraphic.appendChild(
     backTop
   );
 
+
+} else if (name === "Fontbook") {
+
+  function fontbookImage(file, alt) {
+    const img = document.createElement("img");
+    img.src = imagePath(file);
+    img.alt = alt;
+    img.loading = "lazy";
+    return img;
+  }
+
+  // Full-width magazine mockup
+  const hero = document.createElement("div");
+  hero.className = "fontbook-hero";
+
+  hero.appendChild(
+    fontbookImage(
+      "book-1.jpg",
+      "Adineue Pro typography magazine"
+    )
+  );
+
+  // Original project description
+  const description = document.createElement("p");
+  description.className = "fontbook-description";
+
+  description.textContent = `For a typography class assignment, I designed a digital magazine in Adobe InDesign to research and showcase Adineue Pro’s history and characteristics. Growing up in Germany, wearing Adidas, and supporting teams outfitted by the brand made this typeface a personal choice. I completed the project independently, from research to image editing and page layout. My biggest challenge was integrating photography creatively into the typography rather than placing text and images side by side. Player cutouts, layered compositions, and recurring three-stripe graphics brought movement to the pages while connecting the typeface study to Adidas’s athletic identity.`;
+
+  // Two magazine spreads
+  const spreads = document.createElement("div");
+  spreads.className = "fontbook-spreads";
+
+  spreads.appendChild(
+    fontbookImage(
+      "book-2.jpg",
+      "Adineue Pro soccer player magazine spread"
+    ),
+    fontbookImage(
+      "book-3.jpg",
+      "Adineue Pro typography magazine spread"
+    )
+  );
+
+  // Back to Top
+  const backTop = document.createElement("a");
+  backTop.href = "#";
+  backTop.className = "back-to-top";
+  backTop.textContent = "↑ Back to Top";
+
+  backTop.onclick = event => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  gallery.append(
+    hero,
+    description,
+    spreads,
+    backTop
+  );
+
 } else {
+
 
 
 
