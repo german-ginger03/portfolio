@@ -547,7 +547,70 @@ secondGraphic.appendChild(
     backTop
   );
 
+
+} else if (name === "Cedarville Student Organization Principles") {
+
+  function csoImage(file, alt) {
+    const img = document.createElement("img");
+    img.src = imagePath(file);
+    img.alt = alt;
+    img.loading = "lazy";
+    return img;
+  }
+
+  // First row: sketches and digital concepts
+  const top = document.createElement("div");
+  top.className = "cso-top";
+
+  top.append(
+    csoImage("cso-1.jpg", "Initial hand-drawn logo sketches"),
+    csoImage("cso-2.jpg", "Three digital logo concepts")
+  );
+
+  // Original project description
+  const description = document.createElement("p");
+  description.className = "cso-description";
+
+  description.textContent = `As part of my design job at Cedarville University, I developed a combined identity for Student Organization Principles, which supports campus student organizations, and its Bravo Zulu branch, which encourages excellence in effort across campus. I brought the existing Greek-letter symbols, Bravo Zulu elements, and Cedarville mark into one cohesive logo. Starting with hand sketches, I explored arrangements in Adobe InDesign and refined the concepts through feedback from fellow designers and my supervisor. The biggest challenge was balancing the recognizable elements of each identity while keeping the combined mark clear. The selected design became part of campus branding and was used around the university.`;
+
+  // Second row: four logo variations
+  const bottom = document.createElement("div");
+  bottom.className = "cso-bottom";
+
+  [
+    "cso-3.jpg",
+    "cso-4.jpg",
+    "cso-5.jpg",
+    "cso-6.jpg"
+  ].forEach(file => {
+    bottom.appendChild(
+      csoImage(file, "CSO logo variation")
+    );
+  });
+
+  // Back to Top
+  const backTop = document.createElement("a");
+  backTop.href = "#";
+  backTop.className = "back-to-top";
+  backTop.textContent = "↑ Back to Top";
+
+  backTop.onclick = event => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  gallery.append(
+    top,
+    description,
+    bottom,
+    backTop
+  );
+
 } else {
+
 
 
 
