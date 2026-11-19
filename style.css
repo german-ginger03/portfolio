@@ -1577,3 +1577,60 @@ main {
     padding: 0;
   }
 }
+
+/* GRINCH PROJECT - FINAL AND PROGRESS */
+
+.grinch-hero {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.grinch-hero img {
+  display: block;
+  width: 65%;
+  max-width: 850px;
+  height: auto;
+  object-fit: contain;
+}
+
+.grinch-description {
+  max-width: 1050px;
+  margin: 75px auto;
+  color: #ffffff;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.grinch-progress {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+  width: 100%;
+}
+
+.grinch-progress img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .grinch-hero img {
+    width: 100%;
+  }
+
+  .grinch-description {
+    font-size: 16px;
+    margin: 35px auto;
+  }
+
+  .grinch-progress {
+    gap: 6px;
+  }
+}
