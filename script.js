@@ -2,18 +2,18 @@
 const projects = [
   ["Rinnova", "rinnova-7.jpg", "rinnova", 9],
   ["Process Book", "process-book-1.jpg", "process-book", 9],
-  ["Acceptance Package", "packet-1.jpg", "packet", 5],
+  ["Acceptance Package", "packet-2.jpg", "packet", 5],
   ["Sermon Series", "sermon-merch-2.jpg", "sermon-merch", 3],
-  ["MISO Gala", "miso-1.jpg", "miso", 4],
+  ["MISO Gala", "miso-3.jpg", "miso", 4],
   ["Campus Experience Informational", "ce-info-1.jpg", "ce-info", 4],
   ["Fontbook", "book-1.jpg", "book", 5],
   ["JS", "js-1.jpg", "js", 5],
-  ["Cedarville Student Organization Principles", "cso-1.jpg", "cso", 6],
+  ["Cedarville Student Organization Principles", "cso-3.jpg", "cso", 6],
   ["ALT Night 5 Graphics", "alt-1.jpg", "alt", 4],
   ["Grinch", "grinch-final.png", "grinch", 1],
   ["Chunky Dunky", "dunk-1.jpg", "dunk", 2],
   ["Devil Wears Prata", "dwp-1.jpg", "dwp", 3],
-  ["Mascot", "duck-1.jpg", "duck", 3]
+  ["Mascot", "duck-2.jpg", "duck", 3]
 ];
 
 const $ = id => document.getElementById(id);
