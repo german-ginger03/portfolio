@@ -1,6 +1,6 @@
 
 const projects = [
-  ["Rinnova", "rinnova-3.jpg", "rinnova", 9],
+  ["Rinnova", "rinnova-7.jpg", "rinnova", 9],
   ["Process Book", "process-book-1.jpg", "process-book", 9],
   ["Acceptance Package", "packet-1.jpg", "packet", 5],
   ["Sermon Series", "sermon-merch-2.jpg", "sermon-merch", 3],
