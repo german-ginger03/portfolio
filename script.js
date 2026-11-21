@@ -516,15 +516,18 @@ top.appendChild(
   const bottom = document.createElement("div");
   bottom.className = "js-bottom";
 
-  [
-    "js-5.jpg",
-    "js-3.jpg",
-    "js-4.jpg"
-  ].forEach(file => {
-    bottom.appendChild(
-      jsImage(file, "Junior Senior promotional design")
-    );
-  });
+ 
+[
+  "js-1.jpg",
+  "js-2.jpg",
+  "js-3.jpg",
+  "js-4.jpg"
+].forEach(file => {
+  bottom.appendChild(
+    jsImage(file, "Junior Senior promotional design")
+  );
+});
+
 
   // Back to Top
   const backTop = document.createElement("a");
