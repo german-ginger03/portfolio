@@ -1830,3 +1830,28 @@ main {
     width: 100%;
   }
 }
+
+/* PORTFOLIO CREDIT */
+
+.portfolio-credit {
+  padding: 35px 20px;
+  text-align: center;
+  background: #062c3d;
+  color: #a1aab0;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.portfolio-credit p {
+  margin: 0 0 10px;
+}
+
+.portfolio-credit a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.portfolio-credit a:hover {
+  opacity: 0.65;
+}
