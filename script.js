@@ -252,14 +252,15 @@ function openProject(project) {
 const secondGraphic = document.createElement("div");
 secondGraphic.className = "sermon-peter-row";
 
-secondGraphic.appendChild(
+
+secondGraphic.append(
   sermonImage(
     "sermon-merch-4.jpg",
     "1 Peter For Your Joy sermon graphic"
   ),
   sermonImage(
-    "sermon-merch-3.jpg",
-    "For Your Joy second shirt mockup"
+    "sermon-merch-2.jpg",
+    "For Your Joy shirt front"
   )
 );
 
