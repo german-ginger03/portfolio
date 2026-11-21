@@ -1855,3 +1855,36 @@ main {
 .portfolio-credit a:hover {
   opacity: 0.65;
 }
+
+/* ME PAGE - WEBSITE DEVELOPMENT SECTION */
+
+.me-web-design {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255,255,255,0.25);
+}
+
+.me-web-design h2 {
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
+.me-web-design p {
+  margin-bottom: 22px;
+}
+
+.me-web-design a {
+  display: inline-block;
+  color: #b9ddff;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.me-web-design a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
