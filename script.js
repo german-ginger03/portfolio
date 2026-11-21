@@ -457,8 +457,6 @@ bottom.append(
   // Two magazine spreads
   const spreads = document.createElement("div");
   spreads.className = "fontbook-spreads";
-
-  spreads.appendChild(
    
 spreads.appendChild(
   fontbookImage(
