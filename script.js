@@ -459,14 +459,12 @@ bottom.append(
   spreads.className = "fontbook-spreads";
 
   spreads.appendChild(
-    fontbookImage(
-      "book-2.jpg",
-      "Adineue Pro soccer player magazine spread"
-    ),
-    fontbookImage(
-      "book-3.jpg",
-      "Adineue Pro typography magazine spread"
-    )
+   
+spreads.appendChild(
+  fontbookImage(
+    "fontbook-bale-mockup.png",
+    "Adineue Pro magazine mockup featuring the Gareth Bale bicycle kick spread"
+  )
   );
 
   // Back to Top
