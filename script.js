@@ -328,8 +328,6 @@ secondGraphic.append(
   // Two images below the description
   const bottom = document.createElement("div");
   bottom.className = "miso-bottom";
-
-  bottom.appendChild(
     
 bottom.append(
   misoImage(
