@@ -330,14 +330,20 @@ secondGraphic.append(
   bottom.className = "miso-bottom";
 
   bottom.appendChild(
-    misoImage(
-      "miso-2.jpg",
-      "MISO Gala coordinated promotional graphics"
-    ),
-    misoImage(
-      "miso-1.jpg",
-      "MISO Gala printed invitations"
-    )
+    
+bottom.append(
+  misoImage(
+    "miso-2.jpg",
+    "MISO Gala promotional graphics"
+  ),
+  misoImage(
+    "miso-3.jpg",
+    "MISO Gala additional design"
+  ),
+  misoImage(
+    "miso-1.jpg",
+    "MISO Gala printed invitations"
+  )
   );
 
   // Back to Top
