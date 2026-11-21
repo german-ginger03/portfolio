@@ -589,16 +589,25 @@ top.append(
   description.textContent = `As part of my design job at Cedarville University, I developed a combined identity for Student Organization Principles, which supports campus student organizations, and its Bravo Zulu branch, which encourages excellence in effort across campus. I brought the existing Greek-letter symbols, Bravo Zulu elements, and Cedarville mark into one cohesive logo. Starting with hand sketches, I explored arrangements in Adobe InDesign and refined the concepts through feedback from fellow designers and my supervisor. The biggest challenge was balancing the recognizable elements of each identity while keeping the combined mark clear. The selected design became part of campus branding and was used around the university.`;
 
   // Second row: four logo variations
+ 
+  // Featured final logo
+  const finalLogo = document.createElement("div");
+  finalLogo.className = "cso-final";
+
+  finalLogo.appendChild(
+    csoImage(
+      "cso-3.jpg",
+      "Final Cedarville Student Organization Principles logo"
+    )
+  );
+
+  // Additional logo variations
   const bottom = document.createElement("div");
   bottom.className = "cso-bottom";
 
- [
-  "cso-3.jpg",
-  "cso-4.jpg",
-  "cso-5.jpg"
-].forEach(file => {
+  ["cso-4.jpg", "cso-5.jpg"].forEach(file => {
     bottom.appendChild(
-      csoImage(file, "CSO logo variation")
+      csoImage(file, "CSO logo development and variations")
     );
   });
 
@@ -616,12 +625,15 @@ top.append(
     });
   };
 
-  gallery.append(
-    top,
-    description,
-    bottom,
-    backTop
-  );
+  
+gallery.append(
+  top,
+  description,
+  finalLogo,
+  bottom,
+  backTop
+);
+
 
 
 } else if (name === "ALT Night 5 Graphics") {
