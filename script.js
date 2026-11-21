@@ -856,12 +856,12 @@ bottom.append(
   const hero = document.createElement("div");
   hero.className = "mascot-hero";
 
-  hero.appendChild(
-    mascotImage(
-      "duck-1.jpg",
-      "Oregon Ducks mascot redesign"
-    )
-  );
+hero.appendChild(
+  mascotImage(
+    "duck-2.jpg",
+    "Oregon Ducks mascot redesign on dark green"
+  )
+);
 
   // Original project description
   const description = document.createElement("p");
@@ -873,16 +873,17 @@ bottom.append(
   const bottom = document.createElement("div");
   bottom.className = "mascot-bottom";
 
-  bottom.append(
-    mascotImage(
-      "duck-2.jpg",
-      "Oregon Ducks mascot on dark green"
-    ),
-    mascotImage(
-      "duck-3.jpg",
-      "Oregon Ducks merchandise mockups"
-    )
-  );
+bottom.append(
+  mascotImage(
+    "duck-1.jpg",
+    "Oregon Ducks original mascot illustration"
+  ),
+  mascotImage(
+    "duck-3.jpg",
+    "Oregon Ducks merchandise mockups"
+  )
+);
+
 
   // Back to Top
   const backTop = document.createElement("a");
