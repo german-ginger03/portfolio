@@ -294,7 +294,6 @@ secondGraphic.append(
     hero,
     description,
     secondGraphic,
-    shirts,
     backTop
   );
 
