@@ -498,13 +498,13 @@ spreads.appendChild(
   }
 
   // First row: monogram and ticket design
-  const top = document.createElement("div");
-  top.className = "js-top";
+  
+const top = document.createElement("div");
+top.className = "js-top";
 
-  top.append(
-    jsImage("js-1.jpg", "Junior Senior monogram"),
-    jsImage("js-2.jpg", "Junior Senior ticket design")
-  );
+top.appendChild(
+  jsImage("js-5.jpg", "Junior Senior design mockup")
+);
 
   // Original description
   const description = document.createElement("p");
