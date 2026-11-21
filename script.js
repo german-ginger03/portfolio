@@ -649,11 +649,11 @@ gallery.append(
   // First row: horizontal and vertical graphics
   const top = document.createElement("div");
   top.className = "alt-top";
-
-  top.append(
-    altImage("alt-2.jpg", "ALT 5 horizontal event graphic"),
-    altImage("alt-4.jpg", "ALT 5 vertical event graphic")
-  );
+  
+top.append(
+  altImage("alt-1.jpg", "ALT 5 poster mockup"),
+  altImage("alt-4.jpg", "ALT 5 vertical event graphic")
+);
 
   // Original project description
   const description = document.createElement("p");
@@ -665,10 +665,10 @@ gallery.append(
   const bottom = document.createElement("div");
   bottom.className = "alt-bottom";
 
-  bottom.append(
-    altImage("alt-1.jpg", "ALT 5 poster mockup"),
-    altImage("alt-3.jpg", "ALT 5 promotional design")
-  );
+bottom.append(
+  altImage("alt-2.jpg", "ALT 5 horizontal event graphic"),
+  altImage("alt-3.jpg", "ALT 5 promotional design")
+);
 
   // Back to Top
   const backTop = document.createElement("a");
