@@ -1662,3 +1662,27 @@ main {
     gap: 5px;
   }
 }
+
+/* SERMON SERIES - PETER AND SHIRT */
+
+.sermon-peter-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  align-items: start;
+}
+
+.sermon-peter-row img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .sermon-peter-row {
+    grid-template-columns: 1fr;
+  }
+}
